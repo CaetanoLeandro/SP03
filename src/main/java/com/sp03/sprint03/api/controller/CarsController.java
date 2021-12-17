@@ -33,7 +33,6 @@ public class CarsController {
     @ResponseStatus(CREATED)
     public CarsModel patchCarColor(@RequestBody @Valid CarsModel carsModel, @PathVariable String id){
         return service.patchCarByColor(carsModel, id);
-
     }
 
     @GetMapping("/{id}")
