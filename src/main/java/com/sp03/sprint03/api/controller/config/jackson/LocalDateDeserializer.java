@@ -15,5 +15,4 @@ public class LocalDateDeserializer extends JsonDeserializer<LocalDate> {
         String value = parser.getValueAsString();
         return LocalDate.parse(value, DateTimeFormatter.ISO_LOCAL_DATE);
     }
-
 }

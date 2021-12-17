@@ -14,5 +14,4 @@ public class LocalDateSerializer extends JsonSerializer <LocalDate> {
         String formattedDate = value.format(DateTimeFormatter.ISO_LOCAL_DATE);
         generator.writeString(formattedDate);
     }
-
 }
