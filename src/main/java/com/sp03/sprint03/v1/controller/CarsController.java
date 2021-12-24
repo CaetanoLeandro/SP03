@@ -1,8 +1,9 @@
-package com.sp03.sprint03.api.controller;
+package com.sp03.sprint03.v1.controller;
 
-import com.sp03.sprint03.api.model.CarsModel;
-import com.sp03.sprint03.api.service.CarService;
+import com.sp03.sprint03.v1.model.CarsModel;
+import com.sp03.sprint03.v1.service.CarService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -24,13 +25,13 @@ public class CarsController {
     }
 
     @PutMapping("/{id}")
-    @ResponseStatus(NO_CONTENT)
+    @ResponseStatus(OK)
     public CarsModel updateCarById(@RequestBody @Valid CarsModel carsModel, @PathVariable String id){
         return service.updateCarById(carsModel, id);
     }
 
     @PatchMapping("/{id}")
-    @ResponseStatus(CREATED)
+    @ResponseStatus(OK)
     public CarsModel patchCarColor(@RequestBody @Valid CarsModel carsModel, @PathVariable String id){
         return service.patchCarByColor(carsModel, id);
     }

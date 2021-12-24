@@ -1,10 +1,10 @@
-package com.sp03.sprint03.api.model;
+package com.sp03.sprint03.v1.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,5 +19,6 @@ public class CarsModel {
     private String model;
     private String color;
     private Double price;
-    private LocalDate dataSale;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime dataSale;
 }

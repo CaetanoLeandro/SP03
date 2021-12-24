@@ -1,4 +1,4 @@
-package com.sp03.sprint03.api.controller.config.jackson;
+package com.sp03.sprint03.v1.controller.config.jackson;
 
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;

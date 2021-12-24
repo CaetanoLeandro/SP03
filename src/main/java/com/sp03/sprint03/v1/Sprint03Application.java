@@ -1,4 +1,4 @@
-package com.sp03.sprint03.api;
+package com.sp03.sprint03.v1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

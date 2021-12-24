@@ -1,4 +1,4 @@
-package com.sp03.sprint03.api.exceptions.notfound;
+package com.sp03.sprint03.v1.exceptions.notfound;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

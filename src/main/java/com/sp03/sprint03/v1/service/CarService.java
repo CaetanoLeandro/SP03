@@ -1,8 +1,8 @@
-package com.sp03.sprint03.api.service;
+package com.sp03.sprint03.v1.service;
 
-import com.sp03.sprint03.api.exceptions.notfound.NotFoundException;
-import com.sp03.sprint03.api.model.CarsModel;
-import com.sp03.sprint03.api.repository.CarsRepository;
+import com.sp03.sprint03.v1.exceptions.notfound.NotFoundException;
+import com.sp03.sprint03.v1.model.CarsModel;
+import com.sp03.sprint03.v1.repository.CarsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
