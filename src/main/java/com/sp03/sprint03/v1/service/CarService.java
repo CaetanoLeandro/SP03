@@ -46,4 +46,10 @@ public class CarService {
     public List<CarsModel> findAll() {
         return carsRepository.findAll();
     }
+
+    public void deleteAll() {
+        carsRepository.deleteAll();
+    }
+
+
 }

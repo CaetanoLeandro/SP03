@@ -14,4 +14,5 @@ public class RestExceptionDetails {
     private Instant timestamp;
     private String details;
     private String developerMessage;
+
 }

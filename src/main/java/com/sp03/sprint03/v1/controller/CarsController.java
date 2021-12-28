@@ -48,9 +48,21 @@ public class CarsController {
       service.deleteById(id);
     }
 
+    @DeleteMapping
+    @ResponseStatus(NO_CONTENT)
+    public void deleteAnyId( @RequestParam ("id")@Valid String id){
+        service.deleteById(id);
+    }
+
     @GetMapping("/findAll")
     @ResponseStatus(OK)
     public List <CarsModel> findAll(){
         return service.findAll();
+    }
+
+    @GetMapping("/deleteAll")
+    @ResponseStatus(NO_CONTENT)
+    public void deleteAll(){
+        service.deleteAll();
     }
 }
