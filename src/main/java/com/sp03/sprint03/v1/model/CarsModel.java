@@ -21,4 +21,8 @@ public class CarsModel {
     private Double price;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime dataSale;
+
+    public void setData (){
+        dataSale = LocalDateTime.now();
+    }
 }

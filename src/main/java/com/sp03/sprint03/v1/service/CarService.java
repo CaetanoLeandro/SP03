@@ -5,6 +5,7 @@ import com.sp03.sprint03.v1.model.CarsModel;
 import com.sp03.sprint03.v1.repository.CarsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class CarService {
     private final CarsRepository carsRepository;
 
     public CarsModel saveCar(CarsModel carsModel) {
+        carsModel.setData();
         return carsRepository.save(carsModel);
     }
 
@@ -36,20 +38,17 @@ public class CarService {
         carsModel1.setColor(carsModel.getColor());
         return carsRepository.save(carsModel1);
     }
-
-    public void deleteById(String id) {
-        carsRepository.findById(id)
-                .orElseThrow(() -> new NotFoundException("ID not found"));
-        carsRepository.deleteById(id);
-    }
-
     public List<CarsModel> findAll() {
         return carsRepository.findAll();
     }
 
-    public void deleteAll() {
-        carsRepository.deleteAll();
+    public void deleteById(List<String> id) {
+        if(!CollectionUtils.isEmpty(id)) {
+            var del =carsRepository.findAllById(id);
+            carsRepository.deleteAll(del);
+        }
+        else{
+            carsRepository.deleteAll(carsRepository.findAll());
+        }
     }
-
-
 }
